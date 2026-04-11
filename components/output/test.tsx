@@ -1,7 +1,7 @@
 import React from "react";
 import Switch from "@/components/ui/switch";
 
-export const Boolean = ({ row, updateRow }) => {
+export const Test = ({ row, updateRow }) => {
   const formatHandle = (str) => {
     if (!str) return "";
     return str.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
