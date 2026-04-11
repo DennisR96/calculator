@@ -1,7 +1,6 @@
-import React from "react";
-import Switch from "@/components/ui/switch";
+import Input from "@/components/ui/input";
 
-export const Test = ({ row, updateRow }) => {
+export const Number = ({ row, updateRow }) => {
   const formatHandle = (str) => {
     if (!str) return "";
     return str.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
@@ -15,16 +14,15 @@ export const Test = ({ row, updateRow }) => {
         {title && <h3 className="text-sm font-bold text-gray-900">{title}</h3>}
         {row.description && <p className="text-sm text-gray-500">{row.description}</p>}
       </div>
-      <div className="flex items-center">
-        <Switch
-          checked={row.value || false}
-          setChecked={(checked) => {
-            const newRow = { ...row, value: checked };
-            updateRow(newRow);
-          }}
-          title=""
-        />
-      </div>
+      <Input
+        value={row.value || ""}
+        type="number"
+        onChange={(e) => {
+          const newRow = { ...row };
+          newRow.value = parseFloat(e.target.value);
+          updateRow(newRow);
+        }}
+      />
     </div>
   );
 };

@@ -15,9 +15,22 @@ class Adder(Node):
 
     def execute(
         self,
-        number_1: Annotated[float, Handler(handle_name="number_1", handle_type="menu", renderer="number")],
-        number_2: Annotated[float, Handler(handle_name="number_1", handle_type="menu", renderer="number")],
-    ) -> Annotated[float, Handler(handle_name="result", handle_type="output", renderer="number")]:
+        number_1: Annotated[
+            float,
+            Handler(
+                handle_name="number_1", handle_type="menu", renderer="ExampleNumber"
+            ),
+        ],
+        number_2: Annotated[
+            float,
+            Handler(
+                handle_name="number_1", handle_type="menu", renderer="ExampleNumber"
+            ),
+        ],
+    ) -> Annotated[
+        float,
+        Handler(handle_name="result", handle_type="output", renderer="ExampleNumber"),
+    ]:
         result = number_1 + number_2
         return result
 
