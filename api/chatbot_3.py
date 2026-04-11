@@ -6,7 +6,7 @@ from api.core.workflows import get_workflow
 router = APIRouter()
 
 
-@router.post("/chatbot/{workflow_id}")
+@router.post("/testing/{workflow_id}")
 async def testing(
     workflow_id: uuid.UUID,
     messages: list[dict] = [{"role": "user", "content": "Hello, how are you?"}],
