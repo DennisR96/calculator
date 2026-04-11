@@ -18,18 +18,18 @@ class Adder(Node):
         number_1: Annotated[
             float,
             Handler(
-                handle_name="number_1", handle_type="menu", renderer="ExampleNumber"
+                handle_name="number_1", handle_type="menu", renderer="exampleinput"
             ),
         ],
         number_2: Annotated[
             float,
             Handler(
-                handle_name="number_1", handle_type="menu", renderer="ExampleNumber"
+                handle_name="number_1", handle_type="menu", renderer="exampleinput"
             ),
         ],
     ) -> Annotated[
         float,
-        Handler(handle_name="result", handle_type="output", renderer="ExampleNumber"),
+        Handler(handle_name="result", handle_type="output", renderer="exampleoutput"),
     ]:
         result = number_1 + number_2
         return result
