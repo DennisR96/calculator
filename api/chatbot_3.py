@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 @router.post("/chatbot/{workflow_id}")
-async def chatbot(
+async def testing(
     workflow_id: uuid.UUID,
     messages: list[dict] = [{"role": "user", "content": "Hello, how are you?"}],
 ):
