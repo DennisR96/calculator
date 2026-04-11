@@ -32,6 +32,7 @@ class Adder(Node):
         Handler(handle_name="result", handle_type="output", renderer="exampleoutput"),
     ]:
         result = number_1 + number_2
+        print(result)
         return result
 
     def quality_graph(self, graph):
