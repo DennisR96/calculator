@@ -1,4 +1,4 @@
-export const ExampleNumber = ({ row, updateNodeData }) => {
+const ExampleNumber = ({ row, updateNodeData }) => {
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-white border border-slate-100 rounded-xl shadow-sm min-w-[12rem]">
       <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
@@ -12,3 +12,4 @@ export const ExampleNumber = ({ row, updateNodeData }) => {
   );
 };
 
+export default ExampleNumber;

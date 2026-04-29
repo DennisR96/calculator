@@ -1,6 +1,6 @@
 import Input from "@/components/ui/input";
 
-export const ExampleInput = ({ row, updateRow }) => {
+const ExampleInput = ({ row, updateRow }) => {
   const formatHandle = (str) => {
     if (!str) return "";
     return str.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
@@ -27,3 +27,4 @@ export const ExampleInput = ({ row, updateRow }) => {
   );
 };
 
+export default ExampleInput;

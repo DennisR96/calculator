@@ -35,5 +35,5 @@ class Adder(Node):
         print(result)
         return result
 
-    def quality_graph(self, graph):
+    def quality_graph(self, nodes, graph):
         return 0
